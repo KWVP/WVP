@@ -95,15 +95,15 @@
     .btn-secondary:hover { border-color: var(--color-dark); color: var(--color-dark); }
     
     /* Platform logos */
-    .hero-platforms { display: flex; justify-content: center; align-items: center; gap: 24px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--color-gray-200); max-width: 500px; margin: 0 auto; }
+    .hero-platforms { display: flex; justify-content: center; align-items: center; gap: 24px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--color-gray-200); max-width: 600px; margin: 0 auto; }
     .hero-platforms span { font-size: 11px; color: var(--color-gray-500); text-transform: uppercase; letter-spacing: 1px; }
-    .platform-logos { display: flex; gap: 20px; align-items: center; }
-    .platform-logo { height: 24px; opacity: 0.7; transition: opacity 0.2s; }
-    .platform-logo:hover { opacity: 1; }
-    @media (max-width: 500px) { 
-      .hero-platforms { flex-direction: column; gap: 12px; }
-      .platform-logos { gap: 16px; }
-      .platform-logo { height: 20px; }
+    .platform-logos { display: flex; gap: 32px; align-items: center; }
+    .platform-logo { height: 36px; width: auto; opacity: 0.75; transition: all 0.3s; }
+    .platform-logo:hover { opacity: 1; transform: translateY(-2px); }
+    @media (max-width: 600px) { 
+      .hero-platforms { flex-direction: column; gap: 16px; }
+      .platform-logos { gap: 24px; flex-wrap: wrap; justify-content: center; }
+      .platform-logo { height: 28px; }
     }
 
     /* TRUST STRIP */
@@ -183,19 +183,23 @@
     .gmv-tier .range { font-size: 11px; color: var(--color-gray-500); }
     .gmv-note { font-size: 12px; color: var(--color-gray-500); font-style: italic; }
 
-    /* LEAD MAGNET */
-    .lead-magnet { padding: 60px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
-    .lead-magnet-box { max-width: 600px; margin: 0 auto; background: white; border: 1px solid var(--color-gray-200); border-radius: 12px; padding: 40px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
-    .lead-magnet-icon { width: 48px; height: 48px; margin: 0 auto 16px; color: var(--color-accent); }
-    .lead-magnet-box h3 { font-family: var(--font-serif); font-size: 24px; margin-bottom: 8px; }
-    .lead-magnet-box p { font-size: 14px; color: var(--color-gray-600); margin-bottom: 24px; }
-    .lead-magnet-form { display: flex; gap: 12px; max-width: 400px; margin: 0 auto; }
-    @media (max-width: 500px) { .lead-magnet-form { flex-direction: column; } }
-    .lead-magnet-form input { flex: 1; padding: 14px 16px; font-size: 14px; border: 1px solid var(--color-gray-300); border-radius: 4px; font-family: var(--font-sans); }
-    .lead-magnet-form input:focus { outline: none; border-color: var(--color-dark); }
-    .lead-magnet-form button { padding: 14px 24px; font-size: 14px; font-weight: 600; background: var(--color-dark); color: var(--color-light); border: none; border-radius: 4px; cursor: pointer; font-family: var(--font-sans); white-space: nowrap; }
-    .lead-magnet-form button:hover { background: var(--color-gray-700); }
-    .lead-magnet-note { font-size: 11px; color: var(--color-gray-500); margin-top: 12px; }
+    /* TRADE FAIRS */
+    .trade-fairs { padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+    .trade-fairs .section-header { margin-bottom: 48px; }
+    .trade-fairs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 900px) { .trade-fairs-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .trade-fairs-grid { grid-template-columns: 1fr; } }
+    .fair-card { background: white; border: 1px solid var(--color-gray-200); border-radius: 8px; padding: 28px 24px; transition: all 0.2s; }
+    .fair-card:hover { border-color: var(--color-gray-400); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .fair-card-date { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--color-accent); background: rgba(37, 99, 235, 0.08); padding: 6px 10px; border-radius: 4px; margin-bottom: 12px; }
+    .fair-card h4 { font-family: var(--font-serif); font-size: 18px; margin-bottom: 6px; color: var(--color-dark); }
+    .fair-card-location { font-size: 13px; color: var(--color-gray-600); margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    .fair-card-location svg { width: 14px; height: 14px; }
+    .fair-card-desc { font-size: 13px; color: var(--color-gray-500); line-height: 1.5; }
+    .trade-fairs-cta { text-align: center; margin-top: 40px; }
+    .trade-fairs-cta p { font-size: 15px; color: var(--color-gray-600); margin-bottom: 16px; }
+    .trade-fairs-cta a { display: inline-flex; align-items: center; gap: 8px; background: var(--color-dark); color: var(--color-light); padding: 14px 28px; font-size: 14px; font-weight: 600; text-decoration: none; border: 2px solid var(--color-dark); transition: all 0.2s; }
+    .trade-fairs-cta a:hover { background: transparent; color: var(--color-dark); }
 
     /* CTA SECTION */
     .cta-section { padding: 80px 0; background: var(--color-dark); text-align: center; }
@@ -314,10 +318,10 @@
       <div class="hero-platforms">
         <span data-i18n="platforms_label">We operate on</span>
         <div class="platform-logos">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Tmall_logo.svg/200px-Tmall_logo.svg.png" alt="Tmall Global" class="platform-logo" loading="lazy">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/JD.com_logo.svg/200px-JD.com_logo.svg.png" alt="JD.com" class="platform-logo" loading="lazy">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/100px-TikTok_logo.svg.png" alt="Douyin" class="platform-logo" loading="lazy" title="Douyin (TikTok China)">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Xiaohongshu_logo.svg/100px-Xiaohongshu_logo.svg.png" alt="Xiaohongshu" class="platform-logo" loading="lazy">
+          <img src="https://lh3.googleusercontent.com/d/1VMYzQOPog48UibaPt4r3eGxJLkKfrmQx" alt="Tmall Global" class="platform-logo" loading="lazy">
+          <img src="https://lh3.googleusercontent.com/d/1E3z9BkqkMhiDGTcrUm7vbhryXL2s23Fg" alt="JD Worldwide" class="platform-logo" loading="lazy">
+          <img src="https://lh3.googleusercontent.com/d/1806S0FHl10vs9X9T98rfWExLWfzEs0Zh" alt="Douyin" class="platform-logo" loading="lazy">
+          <img src="https://lh3.googleusercontent.com/d/1NR6cITpazob-p1EAV4BD2q7DhuHVHva2" alt="Xiaohongshu" class="platform-logo" loading="lazy">
         </div>
       </div>
     </div>
@@ -530,18 +534,64 @@
     </div>
   </section>
 
-  <!-- LEAD MAGNET -->
-  <section class="lead-magnet">
+  <!-- TRADE FAIRS -->
+  <section class="trade-fairs" id="trade-fairs">
     <div class="container">
-      <div class="lead-magnet-box">
-        <svg class="lead-magnet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-        <h3 data-i18n="lead_title">Free China Entry Checklist</h3>
-        <p data-i18n="lead_desc">12-point compliance & readiness guide for European brands considering China. No fluff.</p>
-        <form class="lead-magnet-form" onsubmit="handleLeadSubmit(event)">
-          <input type="email" placeholder="your@email.com" required aria-label="Email address">
-          <button type="submit" data-i18n="lead_cta">Get the PDF</button>
-        </form>
-        <p class="lead-magnet-note" data-i18n="lead_note">No spam. Unsubscribe anytime.</p>
+      <div class="section-header">
+        <h2 data-i18n="fairs_title">Meet Us at Industry Events</h2>
+        <p data-i18n="fairs_sub">We attend Europe's leading trade fairs for consumer brands. Book a meeting to discuss your China strategy in person.</p>
+      </div>
+      
+      <div class="trade-fairs-grid">
+        <div class="fair-card">
+          <span class="fair-card-date" data-i18n="fair_biofach_date">Feb 10–13, 2026</span>
+          <h4>BIOFACH</h4>
+          <p class="fair-card-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Nuremberg, Germany</p>
+          <p class="fair-card-desc" data-i18n="fair_biofach_desc">World's largest organic trade fair. Perfect for natural pet food and wellness brands.</p>
+        </div>
+        
+        <div class="fair-card">
+          <span class="fair-card-date" data-i18n="fair_petfair_date">Mar 19–22, 2026</span>
+          <h4>Pet Fair Asia</h4>
+          <p class="fair-card-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Beijing, China</p>
+          <p class="fair-card-desc" data-i18n="fair_petfair_desc">Asia's premier pet consumer show. See the market firsthand with us as your guide.</p>
+        </div>
+        
+        <div class="fair-card">
+          <span class="fair-card-date" data-i18n="fair_cosmoprof_date">Mar 20–23, 2026</span>
+          <h4>Cosmoprof Bologna</h4>
+          <p class="fair-card-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Bologna, Italy</p>
+          <p class="fair-card-desc" data-i18n="fair_cosmoprof_desc">The global beauty event. Ideal for cosmetics and skincare brands targeting China.</p>
+        </div>
+        
+        <div class="fair-card">
+          <span class="fair-card-date" data-i18n="fair_natural_date">Apr 5–6, 2026</span>
+          <h4>Natural Products Europe</h4>
+          <p class="fair-card-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> London, UK</p>
+          <p class="fair-card-desc" data-i18n="fair_natural_desc">Europe's hub for natural & organic brands. Great for emerging wellness players.</p>
+        </div>
+        
+        <div class="fair-card">
+          <span class="fair-card-date" data-i18n="fair_interzoo_date">May 19–22, 2026</span>
+          <h4>Interzoo</h4>
+          <p class="fair-card-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Nuremberg, Germany</p>
+          <p class="fair-card-desc" data-i18n="fair_interzoo_desc">World's largest pet trade fair. Our home ground for premium pet food brands.</p>
+        </div>
+        
+        <div class="fair-card">
+          <span class="fair-card-date" data-i18n="fair_sial_date">Oct 19–23, 2026</span>
+          <h4>SIAL Paris</h4>
+          <p class="fair-card-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Paris, France</p>
+          <p class="fair-card-desc" data-i18n="fair_sial_desc">Global food innovation fair. Where emerging FMCG brands meet international buyers.</p>
+        </div>
+      </div>
+      
+      <div class="trade-fairs-cta">
+        <p data-i18n="fairs_cta_text">Schedule a 30-minute meeting at any upcoming event</p>
+        <a href="https://calendly.com/kevin-whitevalleypartners/30min" target="_blank">
+          <span data-i18n="fairs_cta_btn">Book a Fair Meeting</span>
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -595,14 +645,6 @@ document.addEventListener('click', (e) => {
     hamburger.setAttribute('aria-expanded', 'false');
   }
 });
-
-function handleLeadSubmit(e) {
-  e.preventDefault();
-  const email = e.target.querySelector('input').value;
-  // In production, this would submit to your email service
-  alert('Thanks! Check your inbox for the China Entry Checklist.');
-  e.target.reset();
-}
 
 const translations = {
   en: {
@@ -682,10 +724,22 @@ const translations = {
     gmv_title: "Performance Commission (GMV)",
     gmv_mo: "mo",
     gmv_note: "Aligned incentives: We grow when you grow.",
-    lead_title: "Free China Entry Checklist",
-    lead_desc: "12-point compliance & readiness guide for European brands considering China. No fluff.",
-    lead_cta: "Get the PDF",
-    lead_note: "No spam. Unsubscribe anytime.",
+    fairs_title: "Meet Us at Industry Events",
+    fairs_sub: "We attend Europe's leading trade fairs for consumer brands. Book a meeting to discuss your China strategy in person.",
+    fair_biofach_date: "Feb 10–13, 2026",
+    fair_biofach_desc: "World's largest organic trade fair. Perfect for natural pet food and wellness brands.",
+    fair_petfair_date: "Mar 19–22, 2026",
+    fair_petfair_desc: "Asia's premier pet consumer show. See the market firsthand with us as your guide.",
+    fair_cosmoprof_date: "Mar 20–23, 2026",
+    fair_cosmoprof_desc: "The global beauty event. Ideal for cosmetics and skincare brands targeting China.",
+    fair_natural_date: "Apr 5–6, 2026",
+    fair_natural_desc: "Europe's hub for natural & organic brands. Great for emerging wellness players.",
+    fair_interzoo_date: "May 19–22, 2026",
+    fair_interzoo_desc: "World's largest pet trade fair. Our home ground for premium pet food brands.",
+    fair_sial_date: "Oct 19–23, 2026",
+    fair_sial_desc: "Global food innovation fair. Where emerging FMCG brands meet international buyers.",
+    fairs_cta_text: "Schedule a 30-minute meeting at any upcoming event",
+    fairs_cta_btn: "Book a Fair Meeting",
     final_title: "Your Competitors Are Already in China",
     final_sub: "Every month you wait is market share lost. Claim your Q2 2026 slot before they're gone.",
     final_cta: "Book 30-Min Feasibility Call",
@@ -771,10 +825,22 @@ const translations = {
     gmv_title: "Performance-Kommission (GMV)",
     gmv_mo: "Mo",
     gmv_note: "Abgestimmte Anreize: Wir wachsen, wenn Sie wachsen.",
-    lead_title: "Kostenlose China-Einstiegs-Checkliste",
-    lead_desc: "12-Punkte Compliance- & Bereitschafts-Guide für europäische Marken. Ohne Füllmaterial.",
-    lead_cta: "PDF herunterladen",
-    lead_note: "Kein Spam. Jederzeit abbestellbar.",
+    fairs_title: "Treffen Sie uns auf Branchenmessen",
+    fairs_sub: "Wir besuchen die führenden europäischen Fachmessen für Konsumgütermarken. Vereinbaren Sie ein Gespräch über Ihre China-Strategie.",
+    fair_biofach_date: "10.–13. Feb. 2026",
+    fair_biofach_desc: "Weltgrößte Bio-Messe. Perfekt für natürliche Tierfutter- und Wellness-Marken.",
+    fair_petfair_date: "19.–22. März 2026",
+    fair_petfair_desc: "Asiens führende Heimtier-Konsumentenmesse. Erleben Sie den Markt vor Ort mit uns.",
+    fair_cosmoprof_date: "20.–23. März 2026",
+    fair_cosmoprof_desc: "Das globale Beauty-Event. Ideal für Kosmetik- und Hautpflegemarken mit China-Ziel.",
+    fair_natural_date: "5.–6. Apr. 2026",
+    fair_natural_desc: "Europas Hub für natürliche & Bio-Marken. Ideal für aufstrebende Wellness-Marken.",
+    fair_interzoo_date: "19.–22. Mai 2026",
+    fair_interzoo_desc: "Die weltgrößte Heimtier-Fachmesse. Unser Heimspiel für Premium-Tierfutter-Marken.",
+    fair_sial_date: "19.–23. Okt. 2026",
+    fair_sial_desc: "Globale Food-Innovationsmesse. Wo aufstrebende FMCG-Marken internationale Käufer treffen.",
+    fairs_cta_text: "Vereinbaren Sie ein 30-minütiges Gespräch auf einer Messe",
+    fairs_cta_btn: "Messetermin buchen",
     final_title: "Ihre Konkurrenten sind bereits in China",
     final_sub: "Jeder Monat Wartezeit ist verlorener Marktanteil. Sichern Sie Ihren Q2 2026 Platz.",
     final_cta: "30-Min Machbarkeitsgespräch buchen",
@@ -860,10 +926,22 @@ const translations = {
     gmv_title: "Commission Performance (GMV)",
     gmv_mo: "mois",
     gmv_note: "Intérêts alignés : Nous grandissons quand vous grandissez.",
-    lead_title: "Checklist Gratuite Entrée Chine",
-    lead_desc: "Guide 12 points conformité & préparation pour marques européennes. Sans blabla.",
-    lead_cta: "Obtenir le PDF",
-    lead_note: "Pas de spam. Désabonnement possible.",
+    fairs_title: "Rencontrez-nous aux salons professionnels",
+    fairs_sub: "Nous participons aux principaux salons européens pour marques de consommation. Réservez un rendez-vous pour discuter de votre stratégie Chine.",
+    fair_biofach_date: "10–13 fév. 2026",
+    fair_biofach_desc: "Le plus grand salon bio au monde. Parfait pour le petfood naturel et les marques bien-être.",
+    fair_petfair_date: "19–22 mars 2026",
+    fair_petfair_desc: "Le premier salon consommateur pet d'Asie. Découvrez le marché avec nous comme guide.",
+    fair_cosmoprof_date: "20–23 mars 2026",
+    fair_cosmoprof_desc: "L'événement beauté mondial. Idéal pour les marques cosmétiques et soins ciblant la Chine.",
+    fair_natural_date: "5–6 avr. 2026",
+    fair_natural_desc: "Le hub européen des marques naturelles & bio. Idéal pour les acteurs émergents du bien-être.",
+    fair_interzoo_date: "19–22 mai 2026",
+    fair_interzoo_desc: "Le plus grand salon mondial du pet. Notre terrain pour les marques premium de petfood.",
+    fair_sial_date: "19–23 oct. 2026",
+    fair_sial_desc: "Salon mondial de l'innovation alimentaire. Où les marques FMCG émergentes rencontrent les acheteurs.",
+    fairs_cta_text: "Planifiez un rendez-vous de 30 minutes lors d'un salon",
+    fairs_cta_btn: "Réserver un RDV salon",
     final_title: "Vos concurrents sont déjà en Chine",
     final_sub: "Chaque mois d'attente est une part de marché perdue. Réservez votre place Q2 2026.",
     final_cta: "Réserver un appel de 30 min",
@@ -949,10 +1027,22 @@ const translations = {
     gmv_title: "Comisión Rendimiento (GMV)",
     gmv_mo: "mes",
     gmv_note: "Incentivos alineados: Crecemos cuando tú creces.",
-    lead_title: "Checklist Gratuita Entrada China",
-    lead_desc: "Guía 12 puntos cumplimiento y preparación para marcas europeas. Sin relleno.",
-    lead_cta: "Obtener el PDF",
-    lead_note: "Sin spam. Baja cuando quieras.",
+    fairs_title: "Encuéntranos en ferias del sector",
+    fairs_sub: "Asistimos a las principales ferias europeas para marcas de consumo. Agenda una reunión para hablar de tu estrategia China.",
+    fair_biofach_date: "10–13 feb. 2026",
+    fair_biofach_desc: "La mayor feria ecológica del mundo. Perfecta para petfood natural y marcas wellness.",
+    fair_petfair_date: "19–22 mar. 2026",
+    fair_petfair_desc: "La principal feria de consumo pet de Asia. Conoce el mercado con nosotros como guía.",
+    fair_cosmoprof_date: "20–23 mar. 2026",
+    fair_cosmoprof_desc: "El evento global de belleza. Ideal para marcas de cosmética y skincare con objetivo China.",
+    fair_natural_date: "5–6 abr. 2026",
+    fair_natural_desc: "El hub europeo de marcas naturales y eco. Genial para players emergentes de wellness.",
+    fair_interzoo_date: "19–22 mayo 2026",
+    fair_interzoo_desc: "La mayor feria mundial de mascotas. Nuestro terreno para marcas premium de petfood.",
+    fair_sial_date: "19–23 oct. 2026",
+    fair_sial_desc: "Feria global de innovación alimentaria. Donde marcas FMCG emergentes conocen compradores.",
+    fairs_cta_text: "Agenda una reunión de 30 minutos en cualquier feria",
+    fairs_cta_btn: "Reservar reunión en feria",
     final_title: "Tu competencia ya está en China",
     final_sub: "Cada mes que esperas es cuota de mercado perdida. Reserva tu plaza Q2 2026.",
     final_cta: "Reservar llamada de 30 min",
@@ -1038,10 +1128,22 @@ const translations = {
     gmv_title: "Commissione Performance (GMV)",
     gmv_mo: "mese",
     gmv_note: "Incentivi allineati: Cresciamo quando cresci tu.",
-    lead_title: "Checklist Gratuita Ingresso Cina",
-    lead_desc: "Guida 12 punti conformità e preparazione per brand europei. Senza fronzoli.",
-    lead_cta: "Ottieni il PDF",
-    lead_note: "Niente spam. Cancellati quando vuoi.",
+    fairs_title: "Incontraci alle fiere di settore",
+    fairs_sub: "Partecipiamo alle principali fiere europee per brand di consumo. Prenota un incontro per discutere la tua strategia Cina.",
+    fair_biofach_date: "10–13 feb. 2026",
+    fair_biofach_desc: "La più grande fiera bio del mondo. Perfetta per petfood naturale e brand wellness.",
+    fair_petfair_date: "19–22 mar. 2026",
+    fair_petfair_desc: "La principale fiera consumer pet dell'Asia. Scopri il mercato con noi come guida.",
+    fair_cosmoprof_date: "20–23 mar. 2026",
+    fair_cosmoprof_desc: "L'evento beauty globale. Ideale per brand di cosmetica e skincare che puntano alla Cina.",
+    fair_natural_date: "5–6 apr. 2026",
+    fair_natural_desc: "L'hub europeo per brand naturali e bio. Ottimo per player emergenti del wellness.",
+    fair_interzoo_date: "19–22 maggio 2026",
+    fair_interzoo_desc: "La più grande fiera pet del mondo. Il nostro territorio per brand premium di petfood.",
+    fair_sial_date: "19–23 ott. 2026",
+    fair_sial_desc: "Fiera globale dell'innovazione food. Dove i brand FMCG emergenti incontrano i buyer.",
+    fairs_cta_text: "Prenota un incontro di 30 minuti ad una fiera",
+    fairs_cta_btn: "Prenota incontro in fiera",
     final_title: "I tuoi competitor sono già in Cina",
     final_sub: "Ogni mese che aspetti è quota di mercato persa. Prenota il tuo posto Q2 2026.",
     final_cta: "Prenota chiamata di 30 min",
@@ -1127,10 +1229,22 @@ const translations = {
     gmv_title: "Prestatie Commissie (GMV)",
     gmv_mo: "mnd",
     gmv_note: "Afgestemde prikkels: Wij groeien als jij groeit.",
-    lead_title: "Gratis China Entry Checklist",
-    lead_desc: "12-punten compliance & gereedheid gids voor Europese merken. Geen opvulling.",
-    lead_cta: "Download de PDF",
-    lead_note: "Geen spam. Afmelden kan altijd.",
+    fairs_title: "Ontmoet ons op vakbeurzen",
+    fairs_sub: "Wij bezoeken de toonaangevende Europese beurzen voor consumentenmerken. Boek een gesprek over je China-strategie.",
+    fair_biofach_date: "10–13 feb. 2026",
+    fair_biofach_desc: "Grootste biologische vakbeurs ter wereld. Perfect voor natuurlijke petfood- en wellness-merken.",
+    fair_petfair_date: "19–22 mrt. 2026",
+    fair_petfair_desc: "Azië's toonaangevende huisdieren-consumentenbeurs. Ervaar de markt met ons als gids.",
+    fair_cosmoprof_date: "20–23 mrt. 2026",
+    fair_cosmoprof_desc: "Hét mondiale beauty-event. Ideaal voor cosmetica- en skincare-merken gericht op China.",
+    fair_natural_date: "5–6 apr. 2026",
+    fair_natural_desc: "Europese hub voor natuurlijke & bio-merken. Ideaal voor opkomende wellness-spelers.",
+    fair_interzoo_date: "19–22 mei 2026",
+    fair_interzoo_desc: "De grootste dierenbeurs ter wereld. Ons thuisveld voor premium petfood-merken.",
+    fair_sial_date: "19–23 okt. 2026",
+    fair_sial_desc: "Mondiale food-innovatiebeurs. Waar opkomende FMCG-merken internationale kopers ontmoeten.",
+    fairs_cta_text: "Plan een 30-minuten gesprek op een beurs",
+    fairs_cta_btn: "Boek beursafspraak",
     final_title: "Je concurrenten zijn al in China",
     final_sub: "Elke maand wachten is verloren marktaandeel. Claim je Q2 2026 plek.",
     final_cta: "Boek 30-min haalbaarheidsoverleg",
