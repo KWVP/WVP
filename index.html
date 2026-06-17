@@ -26,6 +26,8 @@
     }
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+    section[id] { scroll-margin-top: 80px; }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
     body { font-family: var(--font-sans); background: var(--color-warm); color: var(--color-dark); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     .container { max-width: 980px; margin: 0 auto; padding: 0 40px; }
@@ -128,8 +130,10 @@
     footer p { font-size: 11px; color: var(--color-gray-500); }
 
     [data-lang]:not(.show){ display: none !important; }
-    [data-lang].show{ display: inline; }
+    span[data-lang].show { display: inline; }
+    h1 span[data-lang].show { display: inline; }
     h3[data-lang].show, p[data-lang].show, strong[data-lang].show, div[data-lang].show, .block[data-lang].show { display: block; }
+    .hero-sub span[data-lang].show, .intro p span[data-lang].show, .activity-card p span[data-lang].show { display: inline; }
   </style>
 </head>
 <body>
