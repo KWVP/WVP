@@ -129,11 +129,19 @@
     .footer-brand .logo-text span { font-family: var(--font-sans); font-size: 8px; letter-spacing: 2px; color: var(--color-gray-500); }
     footer p { font-size: 11px; color: var(--color-gray-500); }
 
-    [data-lang]:not(.show){ display: none !important; }
-    span[data-lang].show { display: inline; }
-    h1 span[data-lang].show { display: inline; }
-    h3[data-lang].show, p[data-lang].show, strong[data-lang].show, div[data-lang].show, .block[data-lang].show { display: block; }
-    .hero-sub span[data-lang].show, .intro p span[data-lang].show, .activity-card p span[data-lang].show { display: inline; }
+    /* Bilingual content: English shows by default (no JavaScript required);
+       switching to French is driven entirely by the <html lang> attribute. */
+    .block { display: block; }
+    [data-lang~="fr"] { display: none; }
+    html[lang="fr"] [data-lang~="en"] { display: none; }
+    html[lang="fr"] span[data-lang~="fr"] { display: inline; }
+    html[lang="fr"] h1[data-lang~="fr"],
+    html[lang="fr"] h2[data-lang~="fr"],
+    html[lang="fr"] h3[data-lang~="fr"],
+    html[lang="fr"] p[data-lang~="fr"],
+    html[lang="fr"] strong[data-lang~="fr"],
+    html[lang="fr"] div[data-lang~="fr"],
+    html[lang="fr"] [data-lang~="fr"].block { display: block; }
   </style>
 </head>
 <body>
@@ -161,11 +169,11 @@
       <div class="hero-eyebrow"><span data-lang="en show">Startup &amp; Business Advisory</span><span data-lang="fr">Conseil Startup &amp; Business</span></div>
       <h1>
         <span data-lang="en show">Before you bet the year<br>on it, let's break it.</span>
-        <span data-lang="fr">Avant d'y miser l'annee,<br>mettons-le a l'epreuve.</span>
+        <span data-lang="fr">Avant d'y miser l'année,<br>mettons-le à l'épreuve.</span>
       </h1>
       <p class="hero-sub">
         <span data-lang="en show">I help early-stage founders find the assumptions their plan is quietly resting on, test the ones that matter, and build the unglamorous tools that move a small team. No jargon. No theatre. A straight answer.</span>
-        <span data-lang="fr">J'aide les fondateurs a reperer les hypotheses sur lesquelles leur plan repose en silence, a tester celles qui comptent, et a construire les outils ingrats qui font avancer une petite equipe. Sans jargon. Sans theatre. Un avis franc.</span>
+        <span data-lang="fr">J'aide les fondateurs à repérer les hypothèses sur lesquelles leur plan repose en silence, à tester celles qui comptent, et à construire les outils ingrats qui font avancer une petite équipe. Sans jargon. Sans théâtre. Un avis franc.</span>
       </p>
       <div class="rule"></div>
       <div class="hero-ctas">
@@ -183,7 +191,7 @@
     <div class="container">
       <p>
         <span data-lang="en show">Most startups don't fail because the idea was bad. They fail because nobody tested the one assumption everything depended on. I find that assumption first.</span>
-        <span data-lang="fr">La plupart des startups n'echouent pas parce que l'idee etait mauvaise. Elles echouent parce que personne n'a teste l'hypothese dont tout dependait. Je commence par la trouver.</span>
+        <span data-lang="fr">La plupart des startups n'échouent pas parce que l'idée était mauvaise. Elles échouent parce que personne n'a testé l'hypothèse dont tout dépendait. Je commence par la trouver.</span>
       </p>
     </div>
   </section>
@@ -193,34 +201,34 @@
     <div class="container">
       <div class="section-header">
         <div class="eyebrow"><span data-lang="en show">How I help</span><span data-lang="fr">Comment j'aide</span></div>
-        <h2><span data-lang="en show">Three ways in</span><span data-lang="fr">Trois facons d'intervenir</span></h2>
-        <p><span data-lang="en show">Pick the one that matches where you are. Most founders end up using more than one.</span><span data-lang="fr">Choisissez celle qui correspond a votre situation. La plupart des fondateurs en utilisent plusieurs.</span></p>
+        <h2><span data-lang="en show">Three ways in</span><span data-lang="fr">Trois façons d'intervenir</span></h2>
+        <p><span data-lang="en show">Pick the one that matches where you are. Most founders end up using more than one.</span><span data-lang="fr">Choisissez celle qui correspond à votre situation. La plupart des fondateurs en utilisent plusieurs.</span></p>
       </div>
       <div class="activities-grid">
 
         <div class="activity-card">
           <svg class="activity-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           <h3 data-lang="en show">Pressure-test the model</h3>
-          <h3 data-lang="fr">Eprouver le modele</h3>
+          <h3 data-lang="fr">Éprouver le modèle</h3>
           <p data-lang="en show">We take the business apart and find the assumptions it actually rests on: real demand, the numbers, the path to your first customers. Then we design cheap, fast ways to test them.</p>
-          <p data-lang="fr">On demonte le projet pour trouver les hypotheses sur lesquelles il repose vraiment : la demande, les chiffres, le chemin vers vos premiers clients. Puis on concoit des tests rapides et peu couteux.</p>
+          <p data-lang="fr">On démonte le projet pour trouver les hypothèses sur lesquelles il repose vraiment : la demande, les chiffres, le chemin vers vos premiers clients. Puis on conçoit des tests rapides et peu coûteux.</p>
           <div class="activity-outcome">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en show" class="block">You leave knowing where the model is strong and where it is fragile.</span>
-            <span data-lang="fr" class="block">Vous repartez en sachant ou le modele est solide et ou il est fragile.</span>
+            <span data-lang="fr" class="block">Vous repartez en sachant où le modèle est solide et où il est fragile.</span>
           </div>
         </div>
 
         <div class="activity-card">
           <svg class="activity-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.5.5.9 1.2 1 1.8v.5h6v-.5c.1-.6.5-1.3 1-1.8A7 7 0 0 0 12 2z"/></svg>
           <h3 data-lang="en show">Decide what to build</h3>
-          <h3 data-lang="fr">Decider quoi construire</h3>
+          <h3 data-lang="fr">Décider quoi construire</h3>
           <p data-lang="en show">When everything feels urgent, it helps to have someone outside the founder bubble. We sort what matters now from what can wait, and turn a fuzzy idea into something you can actually scope.</p>
-          <p data-lang="fr">Quand tout semble urgent, un regard exterieur a la bulle du fondateur aide. On separe ce qui compte maintenant de ce qui peut attendre, et on transforme une idee floue en un perimetre concret.</p>
+          <p data-lang="fr">Quand tout semble urgent, un regard extérieur à la bulle du fondateur aide. On sépare ce qui compte maintenant de ce qui peut attendre, et on transforme une idée floue en un périmètre concret.</p>
           <div class="activity-outcome">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en show" class="block">A short, honest priority list you can act on this week.</span>
-            <span data-lang="fr" class="block">Une liste de priorites courte et honnete, actionnable des cette semaine.</span>
+            <span data-lang="fr" class="block">Une liste de priorités courte et honnête, actionnable dès cette semaine.</span>
           </div>
         </div>
 
@@ -229,11 +237,11 @@
           <h3 data-lang="en show">Build the boring tools</h3>
           <h3 data-lang="fr">Construire les outils ingrats</h3>
           <p data-lang="en show">The small automations and tools that quietly save a tiny team hours every week. I design, build, and run them, so you can stay on the part of the business only you can do.</p>
-          <p data-lang="fr">Les petites automatisations et outils qui font gagner des heures chaque semaine a une petite equipe. Je les concois, les construis et les opere, pour que vous restiez sur ce que vous seul pouvez faire.</p>
+          <p data-lang="fr">Les petites automatisations et outils qui font gagner des heures chaque semaine à une petite équipe. Je les conçois, les construis et les opère, pour que vous restiez sur ce que vous seul pouvez faire.</p>
           <div class="activity-outcome">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-lang="en show" class="block">A working system, set up and running, not a slide about one.</span>
-            <span data-lang="fr" class="block">Un systeme operationnel, installe et en service, pas une slide a son sujet.</span>
+            <span data-lang="fr" class="block">Un système opérationnel, installé et en service, pas une slide à son sujet.</span>
           </div>
         </div>
 
@@ -246,15 +254,15 @@
     <div class="container">
       <div class="profile-grid">
         <div class="profile-aside">
-          <div class="eyebrow"><span data-lang="en show">Who you're talking to</span><span data-lang="fr">A qui vous parlez</span></div>
+          <div class="eyebrow"><span data-lang="en show">Who you're talking to</span><span data-lang="fr">À qui vous parlez</span></div>
           <div class="profile-name">Kevin Blanco Valle</div>
           <div class="profile-role"><span data-lang="en show">Founder, White Valley Partners</span><span data-lang="fr">Fondateur, White Valley Partners</span></div>
         </div>
         <div class="profile-text">
           <p data-lang="en show">I have built a company and sold it, sat on the finance side when a market turned, and shipped the small tools that keep a lean team moving. I know what it feels like when the plan meets reality and reality wins.</p>
-          <p data-lang="fr">J'ai cree une entreprise et l'ai cedee, j'ai tenu le cote financier quand un marche a tourne, et j'ai livre les petits outils qui font avancer une equipe reduite. Je sais ce que ca fait quand le plan rencontre la realite et que la realite gagne.</p>
+          <p data-lang="fr">J'ai créé une entreprise et l'ai cédée, j'ai tenu le côté financier quand un marché a tourné, et j'ai livré les petits outils qui font avancer une équipe réduite. Je sais ce que ça fait quand le plan rencontre la réalité et que la réalité gagne.</p>
           <p data-lang="en show">A long stretch in science taught me to question assumptions before trusting them, and that habit is most of what I bring to a founder's table. I would rather tell you something true and uncomfortable than something polished and useless.</p>
-          <p data-lang="fr">Un long parcours scientifique m'a appris a questionner les hypotheses avant de les croire, et cette habitude est l'essentiel de ce que j'apporte. Je prefere vous dire quelque chose de vrai et d'inconfortable que quelque chose de poli et d'inutile.</p>
+          <p data-lang="fr">Un long parcours scientifique m'a appris à questionner les hypothèses avant de les croire, et cette habitude est l'essentiel de ce que j'apporte. Je préfère vous dire quelque chose de vrai et d'inconfortable que quelque chose de poli et d'inutile.</p>
         </div>
       </div>
     </div>
@@ -265,29 +273,29 @@
     <div class="container">
       <div class="approach-grid">
         <div class="approach-text">
-          <h2><span data-lang="en show">How I work</span><span data-lang="fr">Ma facon de travailler</span></h2>
-          <p><span data-lang="en show">Small and direct. You talk to me, not a team you never meet. The aim is to make you sharper, not to make you dependent.</span><span data-lang="fr">En petit comite et sans detour. Vous me parlez a moi, pas a une equipe que vous ne croisez jamais. L'objectif est de vous rendre plus affute, pas dependant.</span></p>
+          <h2><span data-lang="en show">How I work</span><span data-lang="fr">Ma façon de travailler</span></h2>
+          <p><span data-lang="en show">Small and direct. You talk to me, not a team you never meet. The aim is to make you sharper, not to make you dependent.</span><span data-lang="fr">En petit comité et sans détour. Vous me parlez à moi, pas à une équipe que vous ne croisez jamais. L'objectif est de vous rendre plus affûté, pas dépendant.</span></p>
         </div>
         <ul class="approach-list">
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             <div>
-              <strong data-lang="en show" class="block">Honest by default</strong><strong data-lang="fr" class="block">Franc par defaut</strong>
-              <span class="block" data-lang="en show">If the numbers don't hold, I'll say so. You're paying for that, not for reassurance.</span><span class="block" data-lang="fr">Si les chiffres ne tiennent pas, je le dirai. Vous payez pour ca, pas pour etre rassure.</span>
+              <strong data-lang="en show" class="block">Honest by default</strong><strong data-lang="fr" class="block">Franc par défaut</strong>
+              <span class="block" data-lang="en show">If the numbers don't hold, I'll say so. You're paying for that, not for reassurance.</span><span class="block" data-lang="fr">Si les chiffres ne tiennent pas, je le dirai. Vous payez pour ça, pas pour être rassuré.</span>
             </div>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             <div>
-              <strong data-lang="en show" class="block">Been in the seat</strong><strong data-lang="fr" class="block">Deja passe par la</strong>
-              <span class="block" data-lang="en show">Founder and operator, not just an observer. I've made the calls you're facing.</span><span class="block" data-lang="fr">Fondateur et operateur, pas seulement observateur. J'ai pris les decisions que vous affrontez.</span>
+              <strong data-lang="en show" class="block">Been in the seat</strong><strong data-lang="fr" class="block">Déjà passé par là</strong>
+              <span class="block" data-lang="en show">Founder and operator, not just an observer. I've made the calls you're facing.</span><span class="block" data-lang="fr">Fondateur et opérateur, pas seulement observateur. J'ai pris les décisions que vous affrontez.</span>
             </div>
           </li>
           <li>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             <div>
-              <strong data-lang="en show" class="block">Light footprint</strong><strong data-lang="fr" class="block">Empreinte legere</strong>
-              <span class="block" data-lang="en show">No retainers you can't leave. We work on the question, and stop when it's answered.</span><span class="block" data-lang="fr">Pas d'engagement dont on ne sort pas. On traite la question, et on s'arrete quand elle est reglee.</span>
+              <strong data-lang="en show" class="block">Light footprint</strong><strong data-lang="fr" class="block">Empreinte légère</strong>
+              <span class="block" data-lang="en show">No retainers you can't leave. We work on the question, and stop when it's answered.</span><span class="block" data-lang="fr">Pas d'engagement dont on ne sort pas. On traite la question, et on s'arrête quand elle est réglée.</span>
             </div>
           </li>
         </ul>
@@ -328,19 +336,19 @@
 
   function setLang(lang){
     document.documentElement.lang = lang;
-    document.querySelectorAll('[data-lang]').forEach(function(el){
-      var base = el.getAttribute('data-lang').split(' ')[0];
-      if (base === lang) { el.classList.add('show'); }
-      else { el.classList.remove('show'); }
-    });
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    try { localStorage.setItem('wvp-lang', lang); } catch (e) {}
   }
 
-  document.addEventListener('DOMContentLoaded', function(){
-    var browserLang = (navigator.language || 'en').substring(0,2);
-    setLang(browserLang === 'fr' ? 'fr' : 'en');
-  });
+  // Run immediately: English is shown by default in CSS, so there is no
+  // flash of hidden content even before this executes.
+  (function(){
+    var saved = null;
+    try { saved = localStorage.getItem('wvp-lang'); } catch (e) {}
+    var lang = saved || ((navigator.language || 'en').substring(0, 2) === 'fr' ? 'fr' : 'en');
+    setLang(lang);
+  })();
 </script>
 
 </body>
